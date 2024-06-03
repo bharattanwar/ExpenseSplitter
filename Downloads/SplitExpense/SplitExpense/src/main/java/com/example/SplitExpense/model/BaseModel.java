@@ -1,11 +1,10 @@
 package com.example.SplitExpense.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.util.Date;
@@ -19,9 +18,9 @@ public class BaseModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int Id;
     @CreatedDate
-    @Temporal(value = TemporalType.TIMESTAMP)
+    @Temporal(TemporalType.TIMESTAMP)
     private Date createdAt;
-    @CreatedDate
-    @Temporal(value = TemporalType.TIMESTAMP)
+    @LastModifiedDate
+    @Temporal(TemporalType.TIMESTAMP)
     private Date updatedAt;
 }

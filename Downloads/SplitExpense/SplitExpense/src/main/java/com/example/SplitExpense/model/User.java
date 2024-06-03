@@ -4,6 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToMany;
 import lombok.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Getter
@@ -18,5 +19,5 @@ public class User extends BaseModel{
     private String PhoneNumber;
 
     @ManyToMany(mappedBy = "users")
-    List<Group> groups;
+    List<Group> groups = new ArrayList<>();
 }
