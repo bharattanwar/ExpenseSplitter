@@ -19,4 +19,8 @@ public class Expense extends BaseModel{
     @OneToMany
     @JoinColumn(name = "expense_id")
     private List<UserExpense> userExpenses;
+
+    @ManyToOne
+    @JoinColumn(name = "group_id")
+    private Group group;
 }
