@@ -1,4 +1,4 @@
-package com.example.SplitExpense.Strategy;
+package com.example.SplitExpense.service.Strategy;
 
 public class SettleUpStrategyFactory {
     public static SettleUpStrategy getSettleUpStrategy(){

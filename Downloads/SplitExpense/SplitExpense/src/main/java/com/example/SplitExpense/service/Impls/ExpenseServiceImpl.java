@@ -1,24 +1,23 @@
-package com.example.SplitExpense.service;
+package com.example.SplitExpense.service.Impls;
 
 import com.example.SplitExpense.dto.ExpenseDTO;
 import com.example.SplitExpense.exception.ExpenseNotFoundException;
 import com.example.SplitExpense.exception.GroupNotFoundException;
-import com.example.SplitExpense.exception.UserNotFoundException;
 import com.example.SplitExpense.model.Expense;
 import com.example.SplitExpense.model.Group;
 import com.example.SplitExpense.model.UserExpense;
 import com.example.SplitExpense.model.UserExpenseType;
 import com.example.SplitExpense.repository.ExpenseRepository;
 import com.example.SplitExpense.repository.GroupRepository;
+import com.example.SplitExpense.service.ExpenseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 @Service
-public class ExpenseServiceImpl implements ExpenseService{
+public class ExpenseServiceImpl implements ExpenseService {
     @Autowired
     private ExpenseRepository expenseRepository;
     @Autowired

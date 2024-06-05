@@ -1,4 +1,4 @@
-package com.example.SplitExpense.Strategy;
+package com.example.SplitExpense.service.Strategy;
 
 import com.example.SplitExpense.dto.TransactionDTO;
 import com.example.SplitExpense.model.Expense;

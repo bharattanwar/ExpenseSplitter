@@ -1,7 +1,7 @@
-package com.example.SplitExpense.service;
+package com.example.SplitExpense.service.Impls;
 
-import com.example.SplitExpense.Strategy.SettleUpStrategy;
-import com.example.SplitExpense.Strategy.SettleUpStrategyFactory;
+import com.example.SplitExpense.service.Strategy.SettleUpStrategy;
+import com.example.SplitExpense.service.Strategy.SettleUpStrategyFactory;
 import com.example.SplitExpense.dto.GroupRequestDTO;
 import com.example.SplitExpense.dto.GroupResponseDTO;
 import com.example.SplitExpense.dto.TransactionDTO;
@@ -12,6 +12,7 @@ import com.example.SplitExpense.model.Group;
 import com.example.SplitExpense.model.User;
 import com.example.SplitExpense.repository.GroupRepository;
 import com.example.SplitExpense.repository.UserRepository;
+import com.example.SplitExpense.service.GroupService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,7 +21,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class GroupServiceImpl implements GroupService{
+public class GroupServiceImpl implements GroupService {
 
     @Autowired
     private UserRepository userRepository;
